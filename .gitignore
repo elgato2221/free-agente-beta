@@ -1,0 +1,6 @@
+dist/
+node_modules/
+*.zip
+*.exe
+.env
+.free-agente/
