@@ -1,21 +1,21 @@
 <!doctype html><html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Beta para Windows — FREE AGENT</title><meta name="description" content="FREE AGENT Beta: acesso local a arquivos pelo ChatGPT/Claude, com MCP.">
+<title>FREE AGENT — Arquivos do PC no ChatGPT</title><meta name="description" content="Plugin FREE AGENT: o ChatGPT lista, lê e edita arquivos de uma pasta autorizada do seu Windows.">
 <meta name="theme-color" content="#0a0e13">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg"><link rel="stylesheet" href="assets/style.css"></head>
 <body><header class="nav"><div class="wrap nav-inner"><a class="brand" href="./"><img alt="" src="assets/logo.svg">FREE <span>AGENT</span></a>
 <nav aria-label="Navegação"><a href="./#como">Como funciona</a><a href="./#recursos">Recursos</a><a href="./#duvidas">Perguntas</a><a href="https://api.freeagente.com/painel/conta.html">Minha conta</a></nav>
-<a class="btn primary" href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.0-beta/free-agente-0.2.0-beta-win-x64.zip">Baixar beta</a></div></header>
+<a class="btn primary" href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.3-remoto/free-agente-remote-client-0.2.3-win-x64.zip">Baixar cliente</a></div></header>
 <section class="hero"><div class="wrap two"><div>
-<span class="pill">BETA PARA WINDOWS • GRATUITO PARA TESTAR</span>
-<h1>Seu chat. <span class="gradient">Seus arquivos.</span></h1>
-<p class="lead">Conecte um assistente compatível com MCP a uma pasta autorizada do seu Windows. Peça para listar, ler e criar arquivos de texto — sem copiar e colar de janela em janela.</p>
-<div class="actions"><a href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.0-beta/free-agente-0.2.0-beta-win-x64.zip" class="btn primary">↓ Baixar beta para Windows</a>
-<a href="#como" class="btn secondary">Como instalar</a></div>
-<p class="mini">Windows 10/11 (64 bits) • ZIP portátil, cerca de 53 MB • Suporte a MCP personalizado depende da plataforma e do plano • Nenhum pagamento nesta versão</p>
+<span class="pill">PLUGIN PARA CHATGPT • BETA GRATUITO</span>
+<h1>Seu ChatGPT. <span class="gradient">Seus arquivos.</span></h1>
+<p class="lead">O FREE AGENT liga o ChatGPT a uma pasta autorizada do seu Windows. Peça para listar, ler, revisar e criar arquivos de texto, direto no chat, sem copiar e colar de janela em janela.</p>
+<div class="actions"><a href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.3-remoto/free-agente-remote-client-0.2.3-win-x64.zip" class="btn primary">↓ Baixar cliente para Windows</a>
+<a href="#como" class="btn secondary">Como conectar</a></div>
+<p class="mini">Windows 10/11 (64 bits) • ZIP portátil, cerca de 34 MB • Login com conta FREE AGENT (OAuth) • Nenhum pagamento nesta versão</p>
 </div><div class="window" aria-label="Exemplo ilustrativo de uso"><div class="winbar">
 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-<span style="margin-left:10px">free-agente / exemplo de sessão</span></div>
+<span style="margin-left:10px">ChatGPT + FREE AGENT</span></div>
 <div class="pad"><div class="line"><span class="prompt">&gt;</span> Liste minha pasta autorizada
 <span class="good">✓</span> listar_arquivos
 <span class="path">  portfolio/
@@ -26,47 +26,45 @@
 <span class="prompt">&gt;</span> Crie um README para o projeto
 <span class="good">✓</span> gravar_arquivo
 <span class="path">  portfolio/README.md</span></div>
-<div class="note">Exemplo ilustrativo: o agente só recebe acesso aos arquivos da pasta liberada.</div></div></div></div></section>
+<div class="note">Exemplo ilustrativo: o ChatGPT só acessa os arquivos da pasta liberada.</div></div></div></div></section>
 <section class="part" id="como"><div class="wrap">
 <span class="eyebrow">Sem instalador complexo</span><h2>Três passos para começar.</h2>
-<p class="intro">O pacote já inclui o Node.js e o Cloudflared. Você só precisa de Windows e de um ChatGPT, Claude ou outro cliente que permita cadastrar MCP personalizado.</p>
-<div class="cols"><article class="card"><span class="step">01 • EXTRAIR</span><h3>Baixe o ZIP</h3>
-<p>Extraia os arquivos em uma pasta pessoal. Execute <b>INICIAR_FREE_AGENTE.cmd</b> e mantenha a janela aberta durante o uso.</p></article>
-<article class="card"><span class="step">02 • CONECTAR</span><h3>Copie seu link</h3>
-<p>Abra <b>COPIAR_LINK.cmd</b>, cadastre a URL como MCP HTTP personalizado no aplicativo de IA compatível e selecione sem autenticação adicional.</p></article>
-<article class="card"><span class="step">03 • USAR</span><h3>Escolha seus arquivos</h3>
-<p>Coloque arquivos de texto na pasta autorizada dentro de Documentos e peça ao assistente para listá-los, lê-los ou editá-los.</p></article></div></div></section>
+<p class="intro">O cliente já inclui o Node.js. Você só precisa de Windows, de uma conta FREE AGENT e do ChatGPT.</p>
+<div class="cols"><article class="card"><span class="step">01 • VINCULAR</span><h3>Conecte seu PC</h3>
+<p>Entre no <a href="https://api.freeagente.com/painel/conta.html">painel</a>, gere um código de vinculação, extraia o ZIP e execute <b>INICIAR_FREE_AGENTE_REMOTO.cmd</b> com o código.</p></article>
+<article class="card"><span class="step">02 • CONECTAR</span><h3>Adicione no ChatGPT</h3>
+<p>Instale o plugin FREE AGENT no ChatGPT e entre com a mesma conta. A conexão usa OAuth: nenhum link ou token para copiar.</p></article>
+<article class="card"><span class="step">03 • USAR</span><h3>Trabalhe nos arquivos</h3>
+<p>Coloque arquivos de texto em <b>Documentos\FREE AGENTE\area-de-trabalho</b>, deixe o cliente aberto e peça ao ChatGPT para listá-los, lê-los ou editá-los.</p></article></div></div></section>
 <section class="part" id="recursos"><div class="wrap">
 <span class="eyebrow">O que funciona hoje</span><h2>Comece pelo essencial.</h2>
 <div class="cols">
-<div class="card"><h3>Leitura de arquivos</h3><p>Veja a estrutura da pasta e peça explicações sobre seus arquivos de texto.</p></div>
-<div class="card"><h3>Edição e criação</h3><p>O assistente pode gravar arquivos de texto no espaço autorizado, com ações sujeitas à cota local.</p></div>
-<div class="card"><h3>Conexão MCP</h3><p>Use a IA do cliente conectado. O link pessoal do Cloudflare é temporário e muda quando reiniciar.</p></div></div>
-<div class="limitations"><strong>Transparência do beta:</strong> nesta versão o FREE AGENT ainda não executa comandos, não instala programas, não oferece memória entre chats nem substitui um ambiente completo de desenvolvimento como o Codex. Estamos testando primeiro o acesso a arquivos.</div></div></section>
+<div class="card"><h3>Leitura de arquivos</h3><p>Veja a estrutura da pasta e peça explicações e revisões dos seus arquivos de texto.</p></div>
+<div class="card"><h3>Edição e criação</h3><p>O ChatGPT grava arquivos de texto na pasta autorizada, como notas, documentação e scripts (incluindo C# para Unity).</p></div>
+<div class="card"><h3>Análise em lote</h3><p>Com o Code Mode, o ChatGPT combina várias leituras em uma só etapa, em ambiente isolado e somente leitura.</p></div></div>
+<div class="limitations"><strong>Transparência do beta:</strong> o FREE AGENT não executa comandos, não compila projetos, não instala programas e não acessa nada fora da pasta autorizada. Gravar um arquivo pode substituir o conteúdo anterior: mantenha cópias de segurança.</div></div></section>
 <section class="part"><div class="wrap"><div class="pricing">
 <div><span class="eyebrow">Acesso beta</span><h2><strong>Grátis para testar</strong></h2>
-<p>Até 300 ações diárias por instalação, em caráter experimental. Os planos Pro e o sistema Stripe ainda não estão disponíveis.</p></div>
-<a href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.0-beta/free-agente-0.2.0-beta-win-x64.zip" class="btn primary">Baixar agora</a></div>
+<p>Até 300 ações de arquivo por dia, por conta, em caráter experimental. Planos pagos ainda não estão disponíveis.</p></div>
+<a href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.3-remoto/free-agente-remote-client-0.2.3-win-x64.zip" class="btn primary">Baixar agora</a></div>
 <div class="limits"><div><h3>Incluído</h3><ul>
-<li>Ferramentas de listar, ler e gravar texto</li><li>Pasta isolada e escolhida no Windows</li>
-<li>Uso com cliente MCP compatível</li><li>Pacote portátil sem instalação de Node.js</li></ul></div>
+<li>Listar, ler e gravar arquivos de texto</li><li>Pasta isolada no seu Windows</li>
+<li>Login seguro por OAuth e dispositivo revogável</li><li>Cliente portátil sem instalar Node.js</li></ul></div>
 <div><h3>Em desenvolvimento</h3><ul>
-<li>Endereço de conexão permanente</li><li>Instalador assinado</li>
-<li>Terminal, testes de código e rotinas avançadas</li><li>Contas, cobrança Pro e publicação no catálogo</li></ul></div></div></div></section>
+<li>Instalador assinado</li><li>Mais pastas autorizadas</li>
+<li>Planos Pro</li><li>Suporte a macOS</li></ul></div></div></div></section>
 <section class="part" id="duvidas"><div class="wrap"><span class="eyebrow">Perguntas frequentes</span>
 <h2>O que você precisa saber.</h2>
-<details open><summary>Preciso ter o Codex?</summary>
-<p>Não para listar ou editar arquivos pela conexão MCP. O beta ainda não executa shell nem substitui as ferramentas completas do Codex.</p></details>
-<details><summary>Funciona no plano gratuito do ChatGPT?</summary>
-<p>Depende da disponibilidade de conectores MCP personalizados no plano e aplicativo de cada provedor. Confira antes de baixar.</p></details>
+<details open><summary>Meu PC precisa ficar ligado?</summary>
+<p>Sim. O ChatGPT fala com o nosso servidor, que repassa o pedido ao cliente aberto no seu PC. Sem o cliente aberto, as ferramentas avisam que o computador está desconectado.</p></details>
+<details><summary>O FREE AGENT guarda meus arquivos?</summary>
+<p>Não. O conteúdo passa pelo servidor só em trânsito e não é gravado. Veja a <a href="privacidade.html">política de privacidade</a>.</p></details>
 <details><summary>Preciso pagar tokens de API?</summary>
-<p>Este pacote não pede chave própria de API. A IA e seus eventuais custos/limites dependem do ChatGPT, Claude ou cliente MCP que você já usa.</p></details>
+<p>Não. A IA é a do seu ChatGPT; o FREE AGENT só fornece o acesso aos arquivos.</p></details>
 <details><summary>Como desligo o acesso?</summary>
-<p>Feche a janela INICIAR_FREE_AGENTE. O túnel termina. Ao iniciar de novo, é necessário copiar e cadastrar o novo link.</p></details>
-<details><summary>Meu PC precisa ficar ligado?</summary>
-<p>Sim. O agente e o túnel são executados no seu próprio computador durante a sessão.</p></details>
+<p>Feche o cliente, revogue o computador no painel ou desconecte o plugin no ChatGPT.</p></details>
 <details><summary>Já há assinatura Pro?</summary>
-<p>Não. Nesta versão pública beta não existe cobrança. A integração de pagamentos está em testes separados e será anunciada após homologação.</p></details>
+<p>Não. Nesta versão beta não existe cobrança.</p></details>
 </div></section>
 
 <footer><div class="wrap"><span>© 2026 FREE AGENT • Beta independente</span><div class="legal">

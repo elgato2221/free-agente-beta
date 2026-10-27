@@ -1,17 +1,24 @@
 <!doctype html><html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacidade — FREE AGENTE</title><meta name="description" content="FREE AGENTE Beta: acesso local a arquivos pelo ChatGPT/Claude, com MCP.">
+<title>Privacidade — FREE AGENT</title><meta name="description" content="FREE AGENTE Beta: acesso local a arquivos pelo ChatGPT/Claude, com MCP.">
 <meta name="theme-color" content="#0a0e13">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg"><link rel="stylesheet" href="assets/style.css"></head>
-<body><header class="nav"><div class="wrap nav-inner"><a class="brand" href="./"><img alt="" src="assets/logo.svg">FREE <span>AGENTE</span></a>
+<body><header class="nav"><div class="wrap nav-inner"><a class="brand" href="./"><img alt="" src="assets/logo.svg">FREE <span>AGENT</span></a>
 <nav aria-label="Navegação"><a href="./#como">Como funciona</a><a href="./#recursos">Recursos</a><a href="./#duvidas">Perguntas</a></nav>
-<a class="btn primary" href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.0-beta/free-agente-0.2.0-beta-win-x64.zip">Baixar beta</a></div></header>
-<main class="doc"><h1>Privacidade</h1><p>Última atualização: 26/10/2026. Esta é a política do beta portátil do FREE AGENTE distribuído por este repositório independente.</p>
-<h2>Quais dados são tratados</h2><p>O agente funciona localmente no Windows. Você escolhe quais arquivos de texto serão colocados na pasta autorizada. Para processar solicitações, o cliente de IA conectado envia pedidos ao agente por meio de um túnel Cloudflare. O conteúdo dos arquivos lidos pode ser enviado ao cliente de IA para formular as respostas.</p>
-<h2>Onde ficam seus dados</h2><p>Os arquivos são mantidos na pasta autorizada no seu computador. O software grava uma credencial de conexão e o último endereço temporário na pasta oculta <code>.free-agente</code> dentro da instalação do programa. Não há cadastro central obrigatório nem coleta de pagamentos neste beta.</p>
-<h2>Terceiros e retenção</h2><p>O tráfego passa pelo Cloudflare Tunnel e pelo cliente de IA escolhido por você. Esses serviços possuem políticas e práticas próprias. O software não transmite telemetria própria a um banco de dados central nesta versão. Não prometemos sigilo de ponta a ponta ou retenção zero por terceiros.</p>
-<h2>Controle e exclusão</h2><p>Feche o aplicativo para encerrar o túnel. Exclua a pasta de instalação para descartar a credencial e o histórico de link; exclua os arquivos da pasta autorizada somente se desejar removê-los do seu computador. Isso não apaga automaticamente conteúdo que o cliente de IA possa ter registrado.</p>
-<h2>Suporte e solicitações</h2><p>Use o <a href="https://github.com/elgato2221/free-agente-beta/issues">suporte no GitHub</a> para dúvidas gerais. Não publique dados pessoais, senhas ou links MCP em Issues públicos. Para reportar problemas de segurança, use <a href="https://github.com/elgato2221/free-agente-beta/security/advisories/new">relato privado</a>.</p></main>
-<footer><div class="wrap"><span>© 2026 FREE AGENTE • Beta independente</span><div class="legal">
+<a class="btn primary" href="https://github.com/elgato2221/free-agente-beta/releases/download/v0.2.3-remoto/free-agente-remote-client-0.2.3-win-x64.zip">Baixar cliente</a></div></header>
+<main class="doc"><h1>Privacidade</h1><p>Última atualização: 27/10/2026. Esta política cobre o FREE AGENT, incluindo o plugin para ChatGPT (servidor MCP em <code>api.freeagente.com</code>), o cliente para Windows e este site.</p>
+<h2>Quais dados são tratados</h2><ul>
+<li><strong>Conta:</strong> e-mail e senha. A senha é guardada apenas como hash scrypt com salt, nunca em texto.</li>
+<li><strong>Conexão com o ChatGPT:</strong> quando você conecta o plugin, o ChatGPT recebe um token OAuth com as permissões <code>files:read</code> e <code>files:write</code>. Guardamos só o hash desses tokens, com validade e escopo.</li>
+<li><strong>Computador vinculado:</strong> nome do dispositivo, data de vinculação, último contato e o hash da credencial do dispositivo. A credencial em si fica no seu PC, em <code>Documentos\FREE AGENTE\.remote-agent.json</code>.</li>
+<li><strong>Uso:</strong> contagem diária de ações de arquivo por conta, para aplicar o limite do plano gratuito.</li>
+<li><strong>Arquivos:</strong> nomes e conteúdo de arquivos de texto da pasta autorizada (<code>Documentos\FREE AGENTE\area-de-trabalho</code>) só quando o ChatGPT pede uma operação. Esse conteúdo passa pelo nosso servidor apenas em trânsito, para chegar ao ChatGPT ou ao seu PC, e <strong>não é gravado</strong> no nosso banco de dados.</li>
+</ul>
+<h2>Para que usamos</h2><p>Somente para autenticar você, ligar o ChatGPT ao seu computador, aplicar limites de uso e manter a segurança do serviço. Não vendemos dados, não usamos o conteúdo dos seus arquivos para treinar modelos e não exibimos anúncios.</p>
+<h2>Terceiros</h2><p>O servidor roda na Railway e o tráfego passa pela Cloudflare (HTTPS e proteção). A ferramenta opcional de análise em lote (Code Mode) executa código de leitura em um Worker isolado da Cloudflare. O conteúdo que você pede ao ChatGPT para ler é enviado à OpenAI conforme a política dela. Cada um desses serviços tem suas próprias práticas de privacidade.</p>
+<h2>Retenção e exclusão</h2><p>Tokens e códigos expiram automaticamente. Você pode revogar um computador vinculado no <a href="https://api.freeagente.com/painel/conta.html">painel da conta</a> e desconectar o plugin no ChatGPT a qualquer momento. Para excluir a conta e todos os registros associados, abra um pedido pelo <a href="suporte.html">suporte</a>; atendemos em até 30 dias. Arquivos no seu computador nunca são apagados por nós.</p>
+<h2>Segurança</h2><p>Todo acesso usa HTTPS. O cliente do Windows só acessa a pasta autorizada e não executa comandos nem instala programas. Reporte vulnerabilidades pelo <a href="https://github.com/elgato2221/free-agente-beta/security/advisories/new">canal privado</a>.</p>
+<h2>Contato</h2><p>Dúvidas sobre privacidade: <a href="suporte.html">página de suporte</a>.</p></main>
+<footer><div class="wrap"><span>© 2026 FREE AGENT • Beta independente</span><div class="legal">
 <a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a>
 <a href="suporte.html">Suporte</a><a href="https://github.com/elgato2221/free-agente-beta/releases">Versões</a></div></div></footer></body></html>
